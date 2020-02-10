@@ -42,7 +42,6 @@ typedef struct				s_list_car
 	int						carry;
 	int						cycle_to_operation;
 	int						i;
-	int 					i_vis;
 	int						distance_from_command;
 	int						number_of_command;
 	int						id;

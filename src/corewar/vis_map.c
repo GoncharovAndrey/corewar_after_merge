@@ -45,11 +45,11 @@ void				paint_carg(t_map *map)
 	temp = map->start_car;
 	while (temp)
 	{
-		temp->i_vis = get_index(temp->i_vis);
-		color = map->color_map[temp->i_vis] + 10;
+		temp->i = get_index(temp->i);
+		color = map->color_map[temp->i] + 10;
 		wattron(map->game_win, COLOR_PAIR(color));
-		mvwprintw(map->game_win, temp->i_vis / 64 + 1,
-				2 + (temp->i_vis % 64) * 3, "%.2x", map->map[temp->i_vis]);
+		mvwprintw(map->game_win, temp->i / 64 + 1,
+				2 + (temp->i % 64) * 3, "%.2x", map->map[temp->i]);
 		wattroff(map->game_win, COLOR_PAIR(color));
 		temp = temp->next_car;
 	}

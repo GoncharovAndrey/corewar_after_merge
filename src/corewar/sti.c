@@ -18,7 +18,6 @@ int					sti(t_car *car, t_map *map)
 	int				reg_two;
 	int				reg_three;
 
-	car->i_vis = car->i;
 	car->distance_from_command += 2;
 	reg_one = get_value_from_argument(map, car, 1, GET_BYTE);
 	reg_one = car->arr_reg[reg_one - 1];
@@ -26,7 +25,7 @@ int					sti(t_car *car, t_map *map)
 	reg_three = get_value_from_argument(map, car, 3, CUT_MDX);
 	put_from_int_to_map(map->map,
 			(car->i + ((reg_two + reg_three) % IDX_MOD)), reg_one, DIR_SIZE);
-	write_map_color(map, (car->i_vis + ((reg_two + reg_three) % IDX_MOD)),
+	write_map_color(map, (car->i + ((reg_two + reg_three) % IDX_MOD)),
 			4, car);
 	return (1);
 }
