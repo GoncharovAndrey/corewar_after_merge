@@ -50,4 +50,6 @@ void		ft_set_code(t_data *data)
 			ft_exit_with_syntax_error(data);
 	}
 	ft_set_label_values(data);
+	if (data->champion_code_size == 0)
+		ft_exit_with_error(data, ERROR_NO_EXEC_CODE);
 }

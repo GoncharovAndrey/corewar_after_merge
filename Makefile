@@ -99,15 +99,15 @@ all: $(NAME_ASM) $(NAME_DIS) $(NAME_CWS)
 $(NAME_ASM): $(OBJ_DIR) $(OBJ) $(HEADERS)
 	@make -C ./libft
 	@gcc $(LIBFT_A) $(OBJ) -I$(HEADERS_DIR) -o $(NAME_ASM)
-	@echo $(NAME_ASM) create
+	@echo $(NAME_ASM) created.
 
 $(NAME_DIS): $(OBJ_DIS) $(OBJ_D) $(HEADERS)
 			@gcc $(LIBFT_A) $(OBJ_D) -I$(HEADERS_DIR) -o $(NAME_DIS)
-			@echo $(NAME_DIS) create
+			@echo $(NAME_DIS) created.
 
 $(NAME_CWS): $(OBJ_CWS) $(OBJ_C) $(HEADERS)
 			@gcc $(LIBFT_A) $(OBJ_C) -lncurses -I$(HEADERS_DIR) -o $(NAME_CWS)
-			@echo $(NAME_CWS) create
+			@echo $(NAME_CWS) created.
 
 $(OBJ_DIR):
 			@mkdir -p $(OBJ_DIR)

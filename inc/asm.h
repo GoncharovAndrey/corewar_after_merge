@@ -28,6 +28,7 @@
 # define ERROR_NO_COMMENT_COMMAND   "Champion comment command is missing"
 # define ERROR_NAME_LENGTH          "Champion name too long"
 # define ERROR_COMMENT_LENGTH       "Champion comment too long"
+# define ERROR_NO_EXEC_CODE			"Champion exec code is missing"
 # define ERROR_READ_FILE            "Can't read source file"
 # define ERROR_NO_NEWLINE           "No newline at the end of input"
 
