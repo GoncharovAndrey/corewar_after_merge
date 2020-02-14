@@ -43,7 +43,7 @@ t_op			*ft_get_op(const char *name)
 	int	i;
 
 	i = 0;
-	while (i < NOPS)
+	while (g_op_tab[i].name)
 	{
 		if (ft_strequ(g_op_tab[i].name, name))
 			return (&g_op_tab[i]);

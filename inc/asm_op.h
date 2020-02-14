@@ -25,7 +25,7 @@ typedef struct		s_op
 	int				t_dir_size;
 }					t_op;
 
-static t_op		g_op_tab[18] =
+static t_op		g_op_tab[19] =
 {
 	{"live", 1, {T_DIR}, 1, 0, 4},
 	{"ld", 2, {T_DIR | T_IND, T_REG}, 2, 1, 4},
@@ -44,7 +44,8 @@ static t_op		g_op_tab[18] =
 	{"lfork", 1, {T_DIR}, 15, 0, 2},
 	{"aff", 1, {T_REG}, 16, 1, 4},
 	{"fastfork", 1, {T_DIR}, 17, 0, 2},
-	{"trap", 1, {T_DIR}, 18, 0, 4}
+	{"trap", 1, {T_DIR}, 18, 0, 4},
+	{ 0,0,{0},0,0,0}
 };
 
 #endif

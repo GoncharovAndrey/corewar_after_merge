@@ -18,7 +18,7 @@
 # include "../libft/libft.h"
 # include "asm_op.h"
 
-# define NOPS						16
+//# define NOPS						10
 # define NO_FLAG					0
 # define FLAG_A						1
 # define NO_BYTES					0
